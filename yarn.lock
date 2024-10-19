@@ -8348,6 +8348,11 @@ react-dom@^17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
+react-google-charts@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-google-charts/-/react-google-charts-5.1.0.tgz#714b509369cb97e083a9fee873634f09c5694766"
+  integrity sha512-9vOz4NU9lBjj9VF0DQQowKyPKQCb53zN7ts6kNCQqngQCrS9DMT9IuSBnCx1ULAU152+x5dDQ3DugSi2OdqgpA==
+
 react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
