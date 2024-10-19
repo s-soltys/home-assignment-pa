@@ -8,6 +8,10 @@ Based on the description of the task, I have made the decision to use Single-SPA
 Reasons:
 I have existing experience with this top-level router
 The technology connecting the Micro-FE is likely to be easy to replace with another (e.g. Module federation) and allowed me to focus on the implementation
+Alternatives I could have considered:
+- Webpack Module Federation
+- Custom self-built solution
+- Multiple other frameworks (FrintJS, Luigi, Bit)
 
 
 - I have experience working within organisations of different sizes and maturity, therefore I always adapt my solutions to the needs of the team and organisation. In this documentation I list the factors I take into account and then provide a recommendation based on my existing knowledge of Plan A engineering organisation.
