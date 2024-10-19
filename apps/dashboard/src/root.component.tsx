@@ -1,15 +1,10 @@
-import { GenerationChartMixChart } from "./charts/generation/GenerationMixChart";
+import { GenerationChartMixChartContainer } from "./charts/generation-mix/GenerationMixChartContainer";
 
-export default function Root(props) {
+export default function Root() {
   return (
-    <div className="bg-body-tertiary p-5 rounded">
+    <div>
       <h1>Dashboard</h1>
-      <div>
-        <h3>Generation Mix Chart</h3>
-        <div>
-          <GenerationChartMixChart />
-        </div>
-      </div>
+      <GenerationChartMixChartContainer />
     </div>
   );
 }
