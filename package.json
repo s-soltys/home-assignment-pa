@@ -2,7 +2,7 @@
   "name": "@simon/root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "apps/*"
   ],
   "dependencies": {},
   "devDependencies": {
