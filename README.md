@@ -2,9 +2,9 @@
 In this document I provide all the expected inputs for the example Micro-Frontend app home assignment.
 
 The document consists of 3 sections:
-- **How to run?** - Commands on how to "consume" the example app & navigate it
-- **Preface** - Additional context neccessary to interpret my decisions / tradeoffs made within the context of this task
-- **Documentation** - All the expected sections of the documentation shared in the requirements (Architecture, Developer Guide, Onboarding etc.)
+- **[How to run?](#how-to-run)** - Commands on how to "consume" the example app & navigate it
+- **[Preface](#preface)** - Additional context necessary to interpret my decisions / tradeoffs made within the context of this task
+- **[Documentation](#documentation)** - All the expected sections of the documentation shared in the requirements (Architecture, Developer Guide, Onboarding etc.)
 
 ---
 # How to run?
@@ -173,9 +173,12 @@ Ensure regular updates for the wider organisation. Rough schedule:
 - Presentations need to be entertaining and engaging - we are hard-wired to listen to stories = if hired, expect tons of memes in my communication ;)
 - Such a project is a **great** opportunity to grow team members - I would **heavily** involve other team members on all levels of such a project, including also stakeholder. Rolling out Micro-FEs is a CV-building experience for many, and I would love my colleagues to benefit from it as much as possible :muscle:
 
+---
 
 # Epilogue
 
 Hope you enjoyed reading this documentation!
 I did my best to present my actual communication style, not trying to be overly dry and professional but rather authentic and direct.
 Will be happy to share more during an in-person chat! :)
+
+![Kitty waving goodbye](https://media.tenor.com/_7ONitNwv4IAAAAM/kitty-bye.gif)
