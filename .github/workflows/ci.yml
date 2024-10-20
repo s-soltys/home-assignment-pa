@@ -18,8 +18,6 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
-        with:
-          node-version: '20'
 
       - name: Install dependencies with Yarn
         run: yarn install
@@ -38,8 +36,6 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
-        with:
-          node-version: '20'
 
       - name: Run tests
         run: yarn test
@@ -55,8 +51,6 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
-        with:
-          node-version: '20'
 
       - name: Run linting
         run: yarn lint
