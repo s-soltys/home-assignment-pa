@@ -259,10 +259,10 @@ I decided not to clarify and on my own initiative explore the problem with a mor
 
 Recommendations:
 - *Do:* Provide clear guidance on your expectations on the time candidates should invest and/or timebox strategy expectations.
-- *Consider:* Have a 1h engineering manager / tech lead interview before sending out such a home assignment. Building a relationship with a candidate before asking them for such a high investment will improve the candidate experience :)
+- *Consider:* Have a 1h engineering manager / tech lead interview before sending out such a home assignment. Building a relationship with a candidate before asking them for such a high investment will improve the candidate experience.
 
 
-## Thank you :)
+## Thank you
 Hope you enjoyed reading this documentation!
 I did my best to present my actual communication style, not trying to be overly dry and professional but rather authentic and direct.
 Will be happy to share more during an in-person chat! :)
