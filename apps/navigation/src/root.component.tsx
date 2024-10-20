@@ -1,3 +1,5 @@
+import { UserAccount } from "./auth/UserAccount";
+
 export default function Root() {
   return (
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -17,6 +19,7 @@ export default function Root() {
             </a>
           </li>
         </ul>
+        <UserAccount />
       </div>
     </nav>
   );
