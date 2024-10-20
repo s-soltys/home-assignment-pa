@@ -12,6 +12,8 @@
     "start": "lerna run start --parallel",
     "test": "lerna run test --parallel",
     "lint": "lerna run lint --parallel",
-    "format": "lerna run format --parallel"
+    "format": "lerna run format --parallel",
+    "ci:test": "lerna run test",
+    "ci:lint": "lerna run lint"
   }
 }
