@@ -1,10 +1,11 @@
 # Welcome!
 In this document I provide all the expected inputs for the example Micro-Frontend app home assignment.
 
-The document consists of 3 sections:
+The document consists of the following sections:
 - **[How to run?](#how-to-run)** - Commands on how to "consume" the example app & navigate it
 - **[Preface](#preface)** - Additional context necessary to interpret my decisions / tradeoffs made within the context of this task
 - **[Documentation](#documentation)** - All the expected sections of the documentation shared in the requirements (Architecture, Developer Guide, Onboarding etc.)
+- **[Epilogue](#epilogue)** - Some finishing comments
 
 ---
 # How to run?
@@ -38,20 +39,12 @@ Alternatives I could have considered:
 - Webpack Module Federation
 - Multiple other frameworks (FrintJS, Luigi, Bit)
 
-
 **Remark**: I have experience working within organisations of different sizes and maturity, therefore I always adapt my solutions to the needs of the team and organisation. In this documentation I list the factors I take into account, make my own best assumptions and then provide a recommendation based on my existing knowledge of Plan A engineering organisation. I will be happy to run such assumptions and ideas with interviewers during next stages :) 
 
-**Reflection on the home assignment scope:**
-This task is clearly designed for many more hours beyond four.
-It was not clear to me whether you expected me to *timebox* my efforts or rather aim for a robust solution. This made me (and likely other candidates) feel quite uncertain, especially in light of such high barrier before the first technical interview.
-I decided not to clarify and on my own initiative explore the problem with a more generous time investment, as I found this to be an interesting challenge for myself. That being said, this uncertanity might prevent some good candidates from proceeding with your process.
-
-Recommendations:
-- *Do:* Provide clear guidance on your expectations on the time candidates should invest and/or timebox strategy expectations.
-- *Consider:* Have a 1h engineering manager / tech lead interview before sending out such a home assignment. Building a relationship with a candidate before asking them for such a high investment will improve the candidate experience :)
-
-
-
+### Documentation above implementation
+As a rule, while working on this task I put more emphasis on documentation above implementation.
+Tasks such as: linting, CI automation are relatively simple and linear - I can deliver results given enough time, as I would expect any experienced developer to do the same. I assumed you will learn more about my skillset by learning my mindset rather than reading bits of configuration that can be frankly - AI-generated.
+I am happy to discuss my ideas and my code during an interview :)
 
 -----
 # Documentation
@@ -178,6 +171,40 @@ Ensure regular updates for the wider organisation. Rough schedule:
 
 # Epilogue
 
+### Unfinished business
+There are some aspects of the home assignment that I did not finish but would like to comment on:
+- **Shared state** - in my experience with Micro-FEs I avoided introducing shared state between the apps.
+:eyes: For example:
+    - Many apps are likely to load user account info endpoint - something `GET /current-user`
+    - With Micro-Frontends it's likely that many apps would need to have access to such information.
+    - As a general practice I **avoid** introducing shared state between Micro-Frontends. Shared state introduces significant complexity, and as long as it can be traded off for reduncancy it should be considered.
+- **Separation of module types**
+It's best to define in documentation types of modules and their scopes and types of responsibilites. As for example in Single-SPA:
+    - Routed modules - modules that are rendered as routes and not embedded in other apps
+    - Utility modules - modules that expose common stateful services - authentication, API client etc.
+    - Component modules - modules that expose embeddable components that can be placed in many other Micro-FEs
+- **What I would do if I invested 2 more hours?**
+    - Introduce a `core` utility module
+        - The module would expose authentication functionalities - for example a configured `axios` instance with embedded `authorizationz headers
+        - I would extract code in the `navigation` app related to auth and move it to this module
+    - Introduce `route` guards
+        - I would use the `core` module to ensure the `/dashboard` does not render information if the user is not authenticated
+    - Finish up CI config - `lerna` monorepos do not seem to work too easily with GitHub Actions - I'd debug this
+    - More investment in testing - not happy with the results so far, would spend more time separating concerns in the code
+
+
+
+### Reflection on the home assignment scope:
+This task is clearly designed for many more hours beyond four.
+It was not clear to me whether you expected me to *timebox* my efforts or rather aim for a robust solution. This made me (and likely other candidates) feel quite uncertain, especially in light of such high barrier before the first technical interview.
+I decided not to clarify and on my own initiative explore the problem with a more generous time investment, as I found this to be an interesting challenge for myself. That being said, this uncertanity might prevent some good candidates from proceeding with your process.
+
+Recommendations:
+- *Do:* Provide clear guidance on your expectations on the time candidates should invest and/or timebox strategy expectations.
+- *Consider:* Have a 1h engineering manager / tech lead interview before sending out such a home assignment. Building a relationship with a candidate before asking them for such a high investment will improve the candidate experience :)
+
+
+## Thank you :)
 Hope you enjoyed reading this documentation!
 I did my best to present my actual communication style, not trying to be overly dry and professional but rather authentic and direct.
 Will be happy to share more during an in-person chat! :)
