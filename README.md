@@ -7,6 +7,10 @@ The document consists of the following sections:
 - **[Documentation](#documentation)** - All the expected sections of the documentation shared in the requirements (Architecture, Developer Guide, Onboarding etc.)
 - **[Epilogue](#epilogue)** - Some finishing comments
 
+
+**Video onboarding:** For additional context and introduction to the results of the documentation and code, please refer to [Video Commendary](https://example.com).
+Note: Video documentation can be **very** effective and I use and recommend using it heavily across every organisation I work with.
+
 ---
 # How to run?
 ### Prerequisites:
@@ -50,7 +54,40 @@ I am happy to discuss my ideas and my code during an interview :)
 # Documentation
 
 ## Architecture overview:
+The App is a Micro-Frontend app, and has the following key features:
+- Built using [Single-SPA](https://single-spa.js.org/) Micro-Frontend top-level router
+- Mono-repo using [Lerna](https://lerna.js.org/)
+- Yarn as a package manager
+- Apps built using React
+- The app uses TypeScript
+
+**How does the app work?**
+The app consists of 3 Micro-Frontend apps.
+The Micro-Frontend apps are located in `apps/*` directory.
+There are 3 apps:
+- `apps/container` - the root config app, which defines the overall HTML structure of the app and an import map pointing to where to load other Micro-Frontends from
+- `apps/dashboard` - app rendered on the `/dashboard` path that acts as a dashboard for various charts
+- `apps/navigation` - app responsible for rendering navigation components, login functionality (currently mocked) and authentication (handling JWT token passed in the URL on login)
+
+**How does the app work?**
 TODO
+
+**Diagram:**
+TODO
+
+
+**Remarks:** Given 2 more hours spent on this assignment, I would also:
+- Separate authentication functionality into a `utility` (non-visual) app - let's say `@simon/core` app
+The app would expose:
+    - A configured `fetch` / `axios` client with an `auth` token interceptor that adds appropriate headers
+    - Functionality to verify whether the user is authenticated - to be used by other apps
+    - Other generic aspects: deep linking, maybe installing integrations (e.g. GTM)
+- Introduce route guards - don't allow rendering `/dashboard` when the user is not authenticated
+
+**Comments on CI/CD:** This would be an interesting challenge, as a CI/CD pipeline has several components:
+- Built apps can and should be deployed to a CDN
+- Whenver new apps are deployed, the import map also needs to be updated
+- Single-SPA offers a tool named import map deployer to ensure parallel deployability without risks of conflicts / overriding
 
 ## Testing strategy:
 My testing strategy depends on multiple factors:
