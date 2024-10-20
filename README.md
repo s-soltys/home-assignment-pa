@@ -18,15 +18,15 @@ Note: Video documentation can be **very** effective and I use and recommend usin
 2. Install required `nvm` version: `nvm install`
 3. Switch to required npm version: `nvm use`
 
-### Run app
-1. Install dependencies `yarn install`
-2. Start the app: `yarn start`
-3. Open the app: [http://localhost:9000/]()
-
 ### Testing & Linting:
 1. Install dependencies `yarn install`
 2. Run unit tests: `yarn test`
 3. Run lint: `yarn lint`
+
+### Run app
+1. Install dependencies `yarn install`
+2. Start the app: `yarn start`
+3. Open the app: [http://localhost:9000/]()
 
 
 
@@ -88,7 +88,13 @@ There are 3 apps:
 
 
 **Diagram:**
-TODO
+
+**Remarks:**
+- This is a diagram of a more complex architecture - as the existing setup with 2-3 apps would be overly simplistic.
+- Given more time I'd use a code-based tool (e.g. [Mermaid](https://www.mermaidchart.com/))
+- The presented diagram is addressed towards an audience of a mid-level technical skill level (goal of the diagram = list main components of the architecture - apps, dependencies and their relations to team responsibilities)
+
+![Architecture Diagram](docs/architecture-diagram.png)
 
 
 **Remarks:** Given 2 more hours spent on this assignment, I would also:
@@ -99,8 +105,8 @@ The app would expose:
     - Other generic aspects: deep linking, maybe installing integrations (e.g. GTM)
 - Introduce route guards - don't allow rendering `/dashboard` when the user is not authenticated
 
-**Comments on CI/CD:** This would be an interesting challenge, as a CI/CD pipeline has several components:
-- Built apps can and should be deployed to a CDN
+**Comments on CI/CD:** CI/CD pipelines for Micro-Frontend apps are naturally more complex compared to regular single page applications. Single-SPA framework offers some guidelines on how to structure those pipelines. For the purpose of this task I omitted the implementation of this aspect of the application, however it's worth mentioning some challenges:
+- Built apps are static resources, deployed to a CDN and linked to the container app through an import map
 - Whenver new apps are deployed, the import map also needs to be updated
 - Single-SPA offers a tool named import map deployer to ensure parallel deployability without risks of conflicts / overriding
 
