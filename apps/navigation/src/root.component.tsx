@@ -2,7 +2,7 @@ export default function Root() {
   return (
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div className="container-fluid">
-        <a data-testid="app-title" className="navbar-brand" href="#">
+        <a data-testid="app-title" className="navbar-brand" href="/">
           Example Micro-Frontend
         </a>
         <ul className="navbar-nav me-auto mb-2 mb-md-0">

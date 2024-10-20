@@ -38,9 +38,10 @@ Ask explicitly for candidates to timebox their efforts
 2. Start the app: `yarn start`
 3. Open the app: [http://localhost:9000/]()
 
-### Testing:
+### Testing & Linting:
 1. Install dependencies `yarn install`
-2. Start the app: `yarn test`
+2. Run unit tests: `yarn test`
+3. Run lint: `yarn lint`
 
 
 
