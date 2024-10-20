@@ -27,6 +27,21 @@ Ask explicitly for candidates to timebox their efforts
 
 
 
+# How to run?
+### Prerequisites:
+1. Install `nvm`
+2. Install required `nvm` version: `nvm install`
+3. Switch to required npm version: `nvm use`
+
+### Run app
+1. Install dependencies `yarn install`
+2. Start the app: `yarn start`
+3. Open the app: [http://localhost:9000/]()
+
+### Testing:
+1. Install dependencies `yarn install`
+2. Start the app: `yarn test`
+
 
 
 
