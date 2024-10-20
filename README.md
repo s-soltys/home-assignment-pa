@@ -8,7 +8,7 @@ The document consists of the following sections:
 - **[Epilogue](#epilogue)** - Some finishing comments
 
 
-**Video onboarding:** For additional context and introduction to the results of the documentation and code, please refer to [Video Commendary](https://example.com).
+**Video onboarding:** For additional context and introduction to the results of the documentation and code, please refer to [Video Commentary](https://example.com).
 Note: Video documentation can be **very** effective and I use and recommend using it heavily across every organisation I work with.
 
 ---
@@ -70,7 +70,22 @@ There are 3 apps:
 - `apps/navigation` - app responsible for rendering navigation components, login functionality (currently mocked) and authentication (handling JWT token passed in the URL on login)
 
 **How does the app work?**
-TODO
+1. **Lerna Monorepo** - lerna defines and orchestrates all separate packages that are run together as the Micro-Frontend bundle. Switching to a Monorepo can be considered depending on the team workflow & processes.
+    - The `package.json` in the `root` directory defines commands that are batch ran for all Micro-Frontends = starting the apps, running tests etc.
+2. **Container app** - `apps/container`
+    - This app renders `index.ejs` file
+    The file defines shared dependencies and Micro-Frontend apps through import-maps (see `<script type="systemjs-importmap">` script tags)
+    - The app also consists of a top-level Micro-Frontend router in the `microfrontend-layout.html` file. This file defines the structure of the app and defines routes.
+3. **Navigation app** - `apps/navigation`
+    - The app is rendered on all authenticated paths
+    - The app is responsible for:
+        - Rendering navigation components (desktop header)
+        - Handling authentication (auth flow - reading JWT token in URL and/or local storage -> to be moved to a separate `utility app`)
+        - Displaying user profile information and login/logout buttons
+4. **Dashboard app** - `apps/dashboard`
+    - Single page app rendered on `/dashboard` path
+    - The app does not have any dependencies on other Micro-Frontends, as is expected for futher routed apps
+
 
 **Diagram:**
 TODO
