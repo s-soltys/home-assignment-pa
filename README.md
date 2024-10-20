@@ -155,18 +155,19 @@ Once the concept is crystalized, I recommend grouping stakeholders to build exci
     *For example:* We wanted to implement feature ABC, but we ended up introducing bugs in the process, had to spend X number of hours coordinating etc.
     - **Innovative solution**
     Explain the concept of Micro-FEs -> needs to be very simple, 1-2 slides and little jargon - just demonstrate the concept
-    - **Benefits** - likely the most important point in the context of this assignment :D
-    The key aspects I'd emphasize here are:
-        - **:muscle: Team independence & scalability** - teams can work without unneccessary obstacles & coordination red-tape = we are ready to scale to a big and mature organisation
-        - **:star: We are on the bleeding edge of tech** - connect this initiative to an innate startup desire to *push the needle*, it can resonate (of course it's culture dependent). Also communicate how we can avoid vendor lock in and evolve the codebase alongside of trends.
-        - **:car: Speed of delivery** - argue how this can improve our velicity
-        - **:handshake: Collaboration** - Micro-Frontends can incentivise a more streamlined collaboration between **FE & Designers** (& get Designers to argue for this architecture) and also **FE & BE** (they promote a Backend-for-Frontend collaboration model!)
+    - **Benefits** - likely the most important point in the context of this assignment. Listed **[HERE](#key-benefits-of-the-architecture)**
     - **Roadmap** - concise list of milestones, forming the right expectations
 4. **Regular check-ins**
 Ensure regular updates for the wider organisation. Rough schedule:
     - Bi-weekly engineering-wide show & tells
     - Updates on roll-out progress with product & design - I'd use existing ceremonies such as `PM <> Tech sync-ups` and a `Design <> Frontend Jour Fixe`
     - Company level updates on initative whenever major milestones are reached - non-technical & used for celebrating success
+
+### Key benefits of the architecture:
+- **:muscle: Team independence & scalability** - teams can work without unneccessary obstacles & coordination red-tape = we are ready to scale to a big and mature organisation
+- **:star: We are on the bleeding edge of tech** - connect this initiative to an innate startup desire to *push the needle*, it can resonate (of course it's culture dependent). Also communicate how we can avoid vendor lock in and evolve the codebase alongside of trends.
+- **:car: Speed of delivery** - argue how this can improve our velicity
+- **:handshake: Collaboration** - Micro-Frontends can incentivise a more streamlined collaboration between **FE & Designers** (& get Designers to argue for this architecture) and also **FE & BE** (they promote a Backend-for-Frontend collaboration model!)
 
 **Remarks:**
 - In my presentations I focus on simplicity and really scale down the technical jargon as much as possible. I apply storytelling - I would most likely tell a story on how a certain type of project would work out with Micro-FEs vs. without.
