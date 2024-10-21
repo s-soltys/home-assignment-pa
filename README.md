@@ -8,7 +8,7 @@ The document consists of the following sections:
 - **[Epilogue](#epilogue)** - Some finishing comments
 
 
-**Video onboarding:** For additional context and introduction to the results of the documentation and code, please refer to [Video Commentary](https://example.com).
+**Video onboarding:** For additional context and introduction to the results of the documentation and code, please refer to [Video Commentary](https://www.loom.com/share/fa18c64f4a6d4059a3fb32ce30b5f666).
 Note: Video documentation can be **very** effective and I use and recommend using it heavily across every organisation I work with.
 
 ---
